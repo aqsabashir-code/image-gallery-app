@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./ImageGallery.css";
 import { FiDownload } from "react-icons/fi";
+import { motion } from "framer-motion";
+import Navbar from "./Navbar";
 
 function ImageGallery() {
   const [search, setSearch] = useState("");
@@ -55,6 +57,10 @@ function ImageGallery() {
 
   return (
     <div className="app">
+
+      {/* 🔥 NAVBAR ADDED HERE */}
+      <Navbar />
+
       <h1 className="title">Image Gallery</h1>
 
       <div className="search-box">
@@ -78,7 +84,14 @@ function ImageGallery() {
 
       <div className="gallery">
         {images.map((img) => (
-          <div key={img.id} className="image-card">
+          <motion.div
+            key={img.id}
+            className="image-card"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            whileHover={{ scale: 1.05 }}
+          >
             <img src={img.urls.small} alt={img.alt_description} />
 
             <button
@@ -87,7 +100,7 @@ function ImageGallery() {
             >
               <FiDownload />
             </button>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
