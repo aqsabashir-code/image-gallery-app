@@ -9,7 +9,7 @@ function Navbar() {
       textAlign: "center",
       fontSize: "20px"
     }}>
-      🖼️ Image Gallery
+      NAVBAAAAAAAAAARRRRRRRR HAAI YEEEE
     </nav>
   );
 }
