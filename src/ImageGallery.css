@@ -195,3 +195,22 @@ body {
     transform: translateY(0) scale(1);
   }
 }
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .search-box input {
+    width: 90%;
+  }
+
+  .image-card img {
+    height: 180px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}
