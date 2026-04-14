@@ -55,7 +55,7 @@ function ImageGallery() {
 
   return (
     <div className="app">
-      <h1 className="title">Image Generator</h1>
+      <h1 className="title">Image Gallery</h1>
 
       <div className="search-box">
         <input

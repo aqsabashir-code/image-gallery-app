@@ -59,24 +59,28 @@ body {
   font-size: 40px;
   padding-top: 30px;
   letter-spacing: 2px;
-  color: rgb(255, 255, 255); /* ✅ ADD THIS */
+  color: rgb(255, 255, 255); 
 }
 
 /* Search Box */
 .search-box {
   display: flex;
   justify-content: center;
-  margin: 20px 0;
+  position: relative;
+  z-index: 10;
 }
 
 .search-box input {
+  width: 100%;
+  max-width: 400px;
   padding: 12px 20px;
-  width: 300px;
   border-radius: 25px;
   border: none;
   outline: none;
   font-size: 16px;
-  transition: 0.3s;
+  position: relative;
+  z-index: 999;
+  pointer-events: auto;
 }
 
 /* Glow effect */
@@ -213,4 +217,8 @@ body {
   .title {
     font-size: 28px;
   }
+}
+
+* {
+  outline: none;
 }
