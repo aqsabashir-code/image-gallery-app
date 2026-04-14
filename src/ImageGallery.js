@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./ImageGallery.css";
 import { FiDownload } from "react-icons/fi";
 import { motion } from "framer-motion";
-import Navbar from "./Navbar";
+
 
 function ImageGallery() {
   const [search, setSearch] = useState("");
@@ -11,7 +11,7 @@ function ImageGallery() {
 
   const ACCESS_KEY = "BfdPepqgZW1ukRGUZmQfSMtqK5D5c5FzxxzDMvnBFRs";
 
-  // 🔥 Download function
+  
   const downloadImage = async (url) => {
     try {
       const response = await fetch(url);
@@ -26,7 +26,7 @@ function ImageGallery() {
     }
   };
 
-  // 🔥 Fetch images
+  
   useEffect(() => {
     const fetchImages = async () => {
       try {
@@ -58,8 +58,8 @@ function ImageGallery() {
   return (
     <div className="app">
 
-      {/* 🔥 NAVBAR ADDED HERE */}
-      <Navbar />
+    
+    
 
       <h1 className="title">Image Gallery</h1>
 
